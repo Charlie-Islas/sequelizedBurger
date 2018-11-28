@@ -7,9 +7,10 @@ $(function() {
     var newDevourState = {
       devoured: newDevour
     };
-
+    var route="/api/burgers/"+id;
+    console.log(route);
     // Send the PUT request.
-    $.ajax("/api/burgers/" + id, {
+    $.ajax(route, {
       type: "PUT",
       data: newDevourState
     }).then(
